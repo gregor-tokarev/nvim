@@ -79,15 +79,15 @@ _G.packer_plugins = {
     path = "/Users/egortokarev/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cloak.nvim"] = {
+    loaded = true,
+    path = "/Users/egortokarev/.local/share/nvim/site/pack/packer/start/cloak.nvim",
+    url = "https://github.com/laytan/cloak.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/egortokarev/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["dressing.nvim"] = {
-    loaded = true,
-    path = "/Users/egortokarev/.local/share/nvim/site/pack/packer/start/dressing.nvim",
-    url = "https://github.com/stevearc/dressing.nvim"
   },
   ["git-blame.nvim"] = {
     loaded = true,
@@ -128,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/egortokarev/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-tinygit"] = {
-    loaded = true,
-    path = "/Users/egortokarev/.local/share/nvim/site/pack/packer/start/nvim-tinygit",
-    url = "https://github.com/chrisgrieser/nvim-tinygit"
   },
   ["nvim-treesitter"] = {
     loaded = true,

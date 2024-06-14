@@ -43,8 +43,5 @@ return require('packer').startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
 
-  use {
-	  "chrisgrieser/nvim-tinygit",
-	  requires = "stevearc/dressing.nvim",
-  }
+  use ("laytan/cloak.nvim")
 end)
