@@ -1,19 +1,40 @@
+local lsp_zero = require("lsp-zero")
+lsp_zero.extend_lspconfig()
+
 require("mason").setup()
 local mason_lspconfig = require("mason-lspconfig")
 
-local servers = {
-    "lua_ls", "tsserver", "rust_analyzer", "angularls", "ansiblels",
-    "bashls", "cssls", "dockerls", "docker_compose_language_service",
-    "eslint", "gopls", "html", "jsonls", "nginx_language_server",
-    "pyright", "sqlls", "tailwindcss", "volar", "zls"
-}
+
+
+-- local cmp = require("cmp")
+-- local cmp_select = {behavior = cmp.SelectBehavior.Select}
+--
+lsp_zero.on_attach(function(client, bufnr)
+	lsp_zero.default_keymaps({buffer = bufnr})
+end)
 
 mason_lspconfig.setup({
-    ensure_installed = servers
+	ensure_installed = {
+		"lua_ls", "tsserver", "rust_analyzer", "angularls", "ansiblels",
+		"bashls", "cssls", "dockerls", "docker_compose_language_service",
+		"eslint", "gopls", "html", "jsonls", "nginx_language_server",
+		"pyright", "sqlls", "tailwindcss", "volar", "zls"
+	},
+	handlers = {
+		function(server_name)
+			require("lspconfig")[server_name].setup({})
+		end,
+	}
 })
 
-local lspconfig = require("lspconfig")
-for _, ls in ipairs(servers) do
-    lspconfig[ls].setup{}
-end
+local cmp = require("cmp")
 
+cmp.setup({
+	preselect = 'item',
+	completion = {
+		completeopt = 'menu,menuone,noinsert'
+	},
+	mapping = cmp.mapping.preset.insert({
+		['<CR>'] = cmp.mapping.confirm({select = false})
+	})
+})
