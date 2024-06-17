@@ -9,10 +9,13 @@ require("telescope").setup({
 	defaults = {
 		file_ignore_patterns = {
 			"node_modules",
+			"vendor",
 			".turbo",
 			".expo",
 			".vscode",
-			".idea"
+			".idea",
+			"dist",
+			"output",
 		}
 	}
 })
