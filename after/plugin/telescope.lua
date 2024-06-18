@@ -16,6 +16,7 @@ require("telescope").setup({
 			".idea",
 			"dist",
 			"output",
+			"./target"
 		}
 	}
 })
