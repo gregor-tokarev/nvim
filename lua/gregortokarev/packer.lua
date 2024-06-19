@@ -44,4 +44,6 @@ return require('packer').startup(function(use)
   use('MunifTanjim/prettier.nvim')
 
   use ("laytan/cloak.nvim")
+
+  use "terrortylor/nvim-comment"
 end)
