@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/egortokarev/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
     url = "https://github.com/f-person/git-blame.nvim"
   },
+  ["hex.nvim"] = {
+    loaded = true,
+    path = "/Users/egortokarev/.local/share/nvim/site/pack/packer/start/hex.nvim",
+    url = "https://github.com/RaafatTurki/hex.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/egortokarev/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",

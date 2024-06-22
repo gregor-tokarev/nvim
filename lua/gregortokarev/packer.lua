@@ -46,4 +46,5 @@ return require('packer').startup(function(use)
   use ("laytan/cloak.nvim")
 
   use "terrortylor/nvim-comment"
+  use "RaafatTurki/hex.nvim" 
 end)
